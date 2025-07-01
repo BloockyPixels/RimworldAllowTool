@@ -20,3 +20,6 @@ build.js
 /packages/
 /.idea/
 .vs/
+
+Mods/AllowTool/v1.6/Assemblies/0Harmony.dll
+Mods/AllowTool/v1.6/Assemblies/0Harmony.pdb

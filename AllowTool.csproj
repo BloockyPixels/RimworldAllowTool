@@ -9,14 +9,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AllowTool</RootNamespace>
     <AssemblyName>AllowTool</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Mods\AllowTool\v1.5\Assemblies\</OutputPath>
+    <OutputPath>Mods\AllowTool\v1.6\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,35 +26,16 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\RimworldManaged\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="HugsLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\UnlimitedHugs.Rimworld.HugsLib.10.0.1\lib\net472\HugsLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\RimworldManaged\UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\RimworldManaged\UnityEngine.IMGUIModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\RimworldManaged\UnityEngine.TextRenderingModule.dll</HintPath>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.6.4507-beta</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.3.6</Version>
+    </PackageReference>
+    <Reference Include="HugsLib, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\HugsLib\v1.6\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -73,7 +54,7 @@
     <Compile Include="Source\Patches\CompForbiddable_Gizmos_Patch.cs" />
     <Compile Include="Source\Patches\Designator_PlantsCut_Patch.cs" />
     <Compile Include="Source\Patches\Designator_PlantsHarvestWood_Patch.cs" />
-    <Compile Include="Source\Patches\InspectGizmoGrid_DrawInspectGizmoGridFor_Patch.cs" />
+    <Compile Include="Source\Patches\GizmoGridDrawer_DrawGizmoGridFor_Patch.cs" />
     <Compile Include="Source\Patches\Pawn_Kill_Patch.cs" />
     <Compile Include="Source\Settings\PartyHuntSettings.cs" />
     <Compile Include="Source\Settings\StripMineGlobalSettings.cs" />
