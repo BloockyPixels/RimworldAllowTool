@@ -7,7 +7,7 @@ using Verse.AI;
 namespace AllowTool {
 	// Generates hauling jobs for things designated for urgent hauling
 	public class WorkGiver_HaulUrgently : WorkGiver_Scanner {
-		public delegate Job TryGetJobOnThing(Pawn pawn, Thing t, bool forced);
+		public delegate Job WorkGiver_Scanner(Pawn pawn, Thing t, bool forced);
 		
 		// give a vanilla haul job- it works just fine for our needs
 		public static TryGetJobOnThing JobOnThingDelegate = 
